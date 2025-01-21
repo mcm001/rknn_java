@@ -23,7 +23,8 @@ import org.opencv.core.Rect2d;
 public class RknnJNI {
     public static enum ModelVersion {
         YOLO_V5,
-        YOLO_V8
+        YOLO_V8,
+        YOLO_V11
     }
 
     public static class RknnResult {
