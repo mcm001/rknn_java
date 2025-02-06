@@ -258,8 +258,7 @@ detect_result_group_t YoloModel::forward(cv::Mat &orig_img, DetectionFilterParam
     for (int i = 0; i < io_num.n_output; i++)
     {
         memset(&outputs[i], 0, sizeof(rknn_output));
-        // todo hard coded to quantize
-        outputs[i].want_float = 0;
+        outputs[i].want_float = !is_quant;
     }
 
     // 模型推理/Model inference
